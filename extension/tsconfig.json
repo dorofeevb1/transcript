@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM"],
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "types": ["chrome"],
+    "paths": {
+      "@stt/tab-capture": ["./src/infra/stt/tab-capture.chromium.ts"],
+      "@stt/recording": ["./src/infra/stt/recording.chromium.ts"],
+      "@stt/offscreen-doc": ["./src/infra/offscreen/offscreen-doc.chromium.ts"],
+      "@stt/popup-fetch": ["./src/popup/popup-fetch.chromium.ts"]
+    }
+  },
+  "include": ["src/**/*", "manifest.json"]
+}

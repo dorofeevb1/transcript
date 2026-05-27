@@ -1,0 +1,13 @@
+services:
+  whisper:
+    build: .
+    ports:
+      - "8765:8765"
+    environment:
+      WHISPER_MODEL: small
+      WHISPER_DEVICE: cpu
+    volumes:
+      - whisper-cache:/root/.cache/huggingface
+
+volumes:
+  whisper-cache:

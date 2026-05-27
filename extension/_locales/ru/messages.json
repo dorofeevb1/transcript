@@ -1,0 +1,615 @@
+{
+  "extName": {
+    "message": "Стенограмма видео"
+  },
+  "extDesc": {
+    "message": "Полный текст видео с YouTube, Rutube и VK. По минутам и фразам. Бесплатно."
+  },
+  "popupTitle": {
+    "message": "Стенограмма видео"
+  },
+  "optionsTitle": {
+    "message": "Настройки — Стенограмма видео"
+  },
+  "brandTitle": {
+    "message": "Стенограмма"
+  },
+  "brandSub": {
+    "message": "YouTube · Rutube · VK"
+  },
+  "settingsTitle": {
+    "message": "Настройки"
+  },
+  "settingsAria": {
+    "message": "Настройки"
+  },
+  "openVideoPrompt": {
+    "message": "Откройте видео на поддерживаемом сайте"
+  },
+  "statusOpenVideo": {
+    "message": "Откройте страницу с видео"
+  },
+  "history": {
+    "message": "История"
+  },
+  "clearHistory": {
+    "message": "Очистить"
+  },
+  "historyEmpty": {
+    "message": "Пока нет сохранённых стенограмм"
+  },
+  "source": {
+    "message": "Источник"
+  },
+  "captionsMode": {
+    "message": "Субтитры видео"
+  },
+  "sttMode": {
+    "message": "Из аудио (Whisper)"
+  },
+  "captionsHint": {
+    "message": "Готовый текст из файла субтитров Rutube/YouTube/VK — не распознавание голоса. Если у ролика нет дорожки субтитров, Rutube её не отдаёт."
+  },
+  "sttHint": {
+    "message": "Запасной вариант: распознавание речи. Если локальный сервер не запущен — скачайте его и запустите. Включите Play и звук. Лимит записи — в настройках (по умолчанию 5 мин)."
+  },
+  "display": {
+    "message": "Отображение"
+  },
+  "viewMinutes": {
+    "message": "По минутам"
+  },
+  "viewPhrases": {
+    "message": "По фразам"
+  },
+  "fetchText": {
+    "message": "Получить текст"
+  },
+  "cancel": {
+    "message": "Отмена"
+  },
+  "translate": {
+    "message": "Перевод"
+  },
+  "language": {
+    "message": "Язык"
+  },
+  "apply": {
+    "message": "Применить"
+  },
+  "copy": {
+    "message": "Копировать"
+  },
+  "confirmTitle": {
+    "message": "Подтверждение"
+  },
+  "confirmDelete": {
+    "message": "Удалить"
+  },
+  "clearHistoryTitle": {
+    "message": "Очистить историю"
+  },
+  "clearHistoryMessage": {
+    "message": "Удалить всю историю и все сохранённые стенограммы в браузере? Это действие нельзя отменить."
+  },
+  "progressTranslating": {
+    "message": "Перевод…"
+  },
+  "progressRestoring": {
+    "message": "Восстановление…"
+  },
+  "progressCapturing": {
+    "message": "Захват звука вкладки…"
+  },
+  "progressLoading": {
+    "message": "Загрузка…"
+  },
+  "translating": {
+    "message": "Перевод…"
+  },
+  "errNoTab": {
+    "message": "Нет активной вкладки"
+  },
+  "errOpenVideo": {
+    "message": "YouTube · Rutube · VK Видео"
+  },
+  "errHistoryNotFound": {
+    "message": "Стенограмма не найдена в памяти браузера. Получите текст снова."
+  },
+  "errTranslateFailed": {
+    "message": "Ошибка перевода"
+  },
+  "errUnknown": {
+    "message": "Неизвестная ошибка"
+  },
+  "errNoResponse": {
+    "message": "Нет ответа от расширения. Откройте chrome://extensions → обновите расширение (↻), затем F5 на странице видео."
+  },
+  "errOpenVideoFirst": {
+    "message": "Сначала откройте страницу с видео: YouTube, Rutube или VK Видео."
+  },
+  "errNoActiveTab": {
+    "message": "Нет активной вкладки с видео"
+  },
+  "errCaptureAudio": {
+    "message": "Не удалось захватить звук"
+  },
+  "errCaptureRetry": {
+    "message": " Подождите 2 с и повторите."
+  },
+  "errSttFirefoxOnly": {
+    "message": "Распознавание из аудио доступно только в Chrome. В Firefox используйте субтитры видео."
+  },
+  "statusWhisperReady": {
+    "message": "Whisper: $MODEL$ · готов к «Из аудио»",
+    "placeholders": {
+      "model": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusArgos": {
+    "message": "Сервер: быстрый офлайн-перевод (Argos) ✓"
+  },
+  "statusNoArgos": {
+    "message": "Сервер без Argos — перевод через Google. Субтитры работают."
+  },
+  "statusStartServer": {
+    "message": "Скачайте локальный сервер с GitHub Releases и запустите"
+  },
+  "statusWhisperDown": {
+    "message": "Whisper-server не запущен (нужен для «Из аудио»)"
+  },
+  "metaFromCache": {
+    "message": " (из кэша)"
+  },
+  "metaStt": {
+    "message": "Распознавание · $SITE$",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "metaCaptions": {
+    "message": "Субтитры · $SITE$",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "metaTranslatedFrom": {
+    "message": " · перевод с $LANG$",
+    "placeholders": {
+      "lang": {
+        "content": "$1"
+      }
+    }
+  },
+  "metaByMinutes": {
+    "message": " · по минутам"
+  },
+  "metaArgos": {
+    "message": " · офлайн Argos"
+  },
+  "metaMin": {
+    "message": " мин"
+  },
+  "historyLabel": {
+    "message": "$WHEN$ · $TITLE$ · $MINS$ мин · $LANG$",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      },
+      "mins": {
+        "content": "$3"
+      },
+      "lang": {
+        "content": "$4"
+      }
+    }
+  },
+  "historyRutube": {
+    "message": "Rutube · "
+  },
+  "historyVk": {
+    "message": "VK · "
+  },
+  "phaseError": {
+    "message": "Ошибка"
+  },
+  "phaseDone": {
+    "message": "Готово"
+  },
+  "phaseLoadingCaptions": {
+    "message": "Загрузка субтитров…"
+  },
+  "phaseLoadingRutube": {
+    "message": "Загрузка субтитров Rutube…"
+  },
+  "phaseLoadingVk": {
+    "message": "Загрузка субтитров VK…"
+  },
+  "phaseCheckingServer": {
+    "message": "Проверка сервера…"
+  },
+  "phaseCapturing": {
+    "message": "Захват звука вкладки…"
+  },
+  "phaseRecordingUntil": {
+    "message": "Запись до $TIME$$LIMIT$ — Play на $PLATFORM$",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      },
+      "limit": {
+        "content": "$2"
+      },
+      "platform": {
+        "content": "$3"
+      }
+    }
+  },
+  "phaseRecordingLimit": {
+    "message": " (лимит $MIN$ мин — см. настройки расширения)",
+    "placeholders": {
+      "min": {
+        "content": "$1"
+      }
+    }
+  },
+  "phaseRecording": {
+    "message": "Запись $TIME$ — воспроизведите видео",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "phaseRecognizing": {
+    "message": "Распознавание…"
+  },
+  "phaseRecognizingProgress": {
+    "message": "Распознавание $TIME$",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "phaseTranslateByMin": {
+    "message": "Перевод по минутам…"
+  },
+  "phaseTranslate": {
+    "message": "Перевод…"
+  },
+  "phaseMinutes": {
+    "message": "Минуты $DONE$/$TOTAL$",
+    "placeholders": {
+      "done": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "phaseTranslateProgress": {
+    "message": "Перевод $DONE$/$TOTAL$",
+    "placeholders": {
+      "done": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "phasePrepRecord": {
+    "message": "Подготовка записи…"
+  },
+  "errOpenVideoPage": {
+    "message": "Откройте страницу с видео: YouTube, Rutube или VK Видео"
+  },
+  "errLiveCaptions": {
+    "message": "Прямые трансляции: используйте субтитры вручную, если доступны"
+  },
+  "errLiveStt": {
+    "message": "Локальное распознавание не поддерживается для прямых трансляций"
+  },
+  "errCancelled": {
+    "message": "Отменено"
+  },
+  "errServerUnavailable": {
+    "message": "Локальный сервер недоступен. Скачайте его с GitHub Releases."
+  },
+  "errEmptyRecording": {
+    "message": "Запись пустая. Включите звук, нажмите Play на вкладке с видео (не PiP)."
+  },
+  "errRecognizeFailed": {
+    "message": "Не удалось распознать аудио. Проверьте звук и воспроизведение."
+  },
+  "errVideoChanged": {
+    "message": "Видео на странице изменилось — обновите и попробуйте снова"
+  },
+  "errFetchCaptions": {
+    "message": "Не удалось загрузить субтитры"
+  },
+  "errFetchCaptionsDetail": {
+    "message": "$DETAIL$",
+    "placeholders": {
+      "detail": {
+        "content": "$1"
+      }
+    }
+  },
+  "errFetchCaptionsHint": {
+    "message": " Обновите расширение на chrome://extensions (↻) и перезагрузите страницу."
+  },
+  "errFetchCaptionsWhisper": {
+    "message": " Либо скачайте локальный сервер с GitHub Releases."
+  },
+  "errCorsBlocked": {
+    "message": "Сеть заблокировала загрузку субтитров (CORS/CDN). Обновите расширение и страницу."
+  },
+  "errNoCaptions": {
+    "message": "У этого видео нет субтитров"
+  },
+  "errEmptyCaptions": {
+    "message": "Субтитры пустые"
+  },
+  "errVkNoCaptions": {
+    "message": "У этого видео VK нет субтитров или не удалось их извлечь"
+  },
+  "errRecordingModule": {
+    "message": "Модуль записи не отвечает. Обновите расширение (chrome://extensions → ↻)."
+  },
+  "errTranslateUnavailable": {
+    "message": "Перевод недоступен. Откройте вкладку с видео, обновите страницу (F5) и повторите."
+  },
+  "errTranslateGoogle": {
+    "message": "Перевод недоступен (Google ограничил запросы). Подождите 1–2 мин или смените сеть/VPN."
+  },
+  "langOriginal": {
+    "message": "Оригинал"
+  },
+  "optionsLocalServer": {
+    "message": "Локальный сервер"
+  },
+  "optionsServerDesc": {
+    "message": "Whisper и быстрый перевод Argos. Скачайте локальный сервер и укажите его адрес."
+  },
+  "optionsServerUrl": {
+    "message": "URL сервера"
+  },
+  "serverUrlPlaceholder": {
+    "message": "http://127.0.0.1:8765"
+  },
+  "optionsCheckConnection": {
+    "message": "Проверить подключение"
+  },
+  "optionsLanguages": {
+    "message": "Языки"
+  },
+  "optionsUiLang": {
+    "message": "Язык интерфейса расширения"
+  },
+  "optUiAuto": {
+    "message": "Авто (система / браузер)"
+  },
+  "optUiRu": {
+    "message": "Русский"
+  },
+  "optUiEn": {
+    "message": "English"
+  },
+  "optUiUk": {
+    "message": "Українська"
+  },
+  "optUiDe": {
+    "message": "Deutsch"
+  },
+  "optUiEs": {
+    "message": "Español"
+  },
+  "optUiFr": {
+    "message": "Français"
+  },
+  "optionsReloadUiHint": {
+    "message": "Язык интерфейса применится после повторного открытия этой страницы или popup."
+  },
+  "optionsCaptionLang": {
+    "message": "Язык субтитров YouTube"
+  },
+  "optionsSttLang": {
+    "message": "Язык распознавания (режим «Из аудио»)"
+  },
+  "optionsMaxRecord": {
+    "message": "Макс. запись «Из аудио» (минут)"
+  },
+  "optionsSegmentation": {
+    "message": "Разбивка текста"
+  },
+  "optionsBlockSize": {
+    "message": "Размер блока"
+  },
+  "optionsSilentMinutes": {
+    "message": "Пустые минуты помечать [тишина]"
+  },
+  "optionsSave": {
+    "message": "Сохранить настройки"
+  },
+  "optionsSaved": {
+    "message": "Настройки сохранены"
+  },
+  "optionsChecking": {
+    "message": "Проверка подключения…"
+  },
+  "optionsConnected": {
+    "message": "Подключено. Whisper: $MODEL$$TRANSLATE$",
+    "placeholders": {
+      "model": {
+        "content": "$1"
+      },
+      "translate": {
+        "content": "$2"
+      }
+    }
+  },
+  "optionsServerNotOk": {
+    "message": "Сервер ответил, но статус не ok"
+  },
+  "optionsUnavailable": {
+    "message": "Недоступен: $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsHealthArgos": {
+    "message": " · офлайн-перевод Argos"
+  },
+  "optionsHealthGoogle": {
+    "message": " · перевод через Google"
+  },
+  "optCaptionAuto": {
+    "message": "Авто (ru → en)"
+  },
+  "optCaptionRu": {
+    "message": "Русский"
+  },
+  "optCaptionEn": {
+    "message": "Английский"
+  },
+  "optSttRu": {
+    "message": "Русский"
+  },
+  "optSttEn": {
+    "message": "Английский"
+  },
+  "optSttAuto": {
+    "message": "Авто"
+  },
+  "optBlock30": {
+    "message": "30 секунд"
+  },
+  "optBlock60": {
+    "message": "1 минута"
+  },
+  "optBlock120": {
+    "message": "2 минуты"
+  },
+  "platformVk": {
+    "message": "VK Видео"
+  },
+  "themeToggle": {
+    "message": "Сменить тему"
+  },
+  "toastClose": {
+    "message": "Закрыть"
+  },
+  "settings": {
+    "message": "Настройки"
+  },
+  "optFieldSaved": {
+    "message": "Сохранено"
+  },
+  "optSectionAppearance": {
+    "message": "Оформление"
+  },
+  "optTheme": {
+    "message": "Тема"
+  },
+  "optThemeAuto": {
+    "message": "Авто (как в системе)"
+  },
+  "optThemeLight": {
+    "message": "Светлая"
+  },
+  "optThemeDark": {
+    "message": "Тёмная"
+  },
+  "donationPrompt": {
+    "message": "Поддержать копилку"
+  },
+  "donationDismiss": {
+    "message": "Скрыть"
+  },
+  "proWaitlistTitle": {
+    "message": "Pro версия в работе"
+  },
+  "proWaitlistDesc": {
+    "message": "Подписка на ранний доступ — без рассылок, одно письмо при запуске."
+  },
+  "proWaitlistCta": {
+    "message": "Сообщить"
+  },
+  "proWaitlistThanks": {
+    "message": "Спасибо, добавили в список."
+  },
+  "analyticsTitle": {
+    "message": "Анонимная статистика"
+  },
+  "analyticsPrivacyNote": {
+    "message": "Отправляются только: название события, версия расширения и язык интерфейса. Без URL, ID видео и каких-либо персональных данных."
+  },
+  "analyticsEnable": {
+    "message": "Включить отправку анонимных событий"
+  },
+  "welcomeTitle": {
+    "message": "Добро пожаловать в «Стенограмму видео»"
+  },
+  "welcomeLede": {
+    "message": "Полный текст видео с YouTube, Rutube и VK Видео — по минутам, по фразам, с экспортом."
+  },
+  "welcomeHow": {
+    "message": "Как это работает"
+  },
+  "welcomeStep1": {
+    "message": "Откройте видео на YouTube, Rutube или VK Видео."
+  },
+  "welcomeStep2": {
+    "message": "Кликните иконку «Стенограмма видео»."
+  },
+  "welcomeStep3": {
+    "message": "Нажмите «Получить текст» — читайте по минутам или фразам, копируйте, экспортируйте."
+  },
+  "welcomeFree": {
+    "message": "В бесплатном тарифе"
+  },
+  "welcomeFreeBullets": {
+    "message": "Субтитры YouTube · Rutube · VK Видео (до 1 ч) · перевод · экспорт .txt · история (50 шт., кэш 7 дней) · локальный Whisper"
+  },
+  "welcomePrivacy": {
+    "message": "Приватность"
+  },
+  "welcomePrivacyBody": {
+    "message": "Стенограммы остаются в браузере. Мы отправляем анонимные события «install» и «activate», чтобы понимать, что расширение работает — можно отключить ниже."
+  },
+  "welcomeOpenSettings": {
+    "message": "Открыть настройки"
+  },
+  "welcomeOptOutLabel": {
+    "message": "Не отправлять анонимные события install/activate"
+  },
+  "welcomeDone": {
+    "message": "Понятно"
+  },
+  "optPlausibleTitle": {
+    "message": "События install / activate"
+  },
+  "optPlausibleNote": {
+    "message": "Три анонимных события: install, activate и (если вы перейдёте на Pro) convert. Без URL, ID видео и идентификаторов. Свой Plausible-сервер."
+  },
+  "optPlausibleOptOut": {
+    "message": "Не отправлять события install/activate"
+  },
+  "downloadLink": {
+    "message": "Скачать ↗"
+  }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru" data-i18n-doc-title="popupTitle" data-theme="auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Стенограмма</title>
+    <link rel="stylesheet" href="../shared/theme.css" />
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <h1 data-i18n="brandTitle">Стенограмма</h1>
+            <p class="brand-sub" data-i18n="brandSub">YouTube · Rutube · VK</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button
+            type="button"
+            id="btn-fetch"
+            class="btn btn-primary btn-sm"
+            data-i18n="fetchText"
+          >
+            Получить текст
+          </button>
+          <button
+            type="button"
+            id="btn-cancel"
+            class="btn btn-sm hidden"
+            data-i18n="cancel"
+          >Отмена</button>
+          <button
+            type="button"
+            id="btn-theme"
+            class="icon-btn icon-theme"
+            data-i18n-title="themeToggle"
+            data-i18n-aria="themeToggle"
+            aria-label="Toggle theme"
+            title="Toggle theme"
+          >
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="icon-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 3v18M3 12a9 9 0 0 1 9-9"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="body">
+        <div class="video-card card">
+          <p id="video-title" class="video-title muted" data-i18n="openVideoPrompt">
+            Откройте видео на поддерживаемом сайте
+          </p>
+          <p id="status-line" class="status-line" aria-live="polite"></p>
+        </div>
+
+        <section id="history-section" class="card history-section">
+          <div class="history-header">
+            <span class="card-title" data-i18n="history">История</span>
+            <button
+              type="button"
+              id="btn-clear-history"
+              class="btn btn-ghost btn-sm"
+              data-i18n="clearHistory"
+            >Очистить</button>
+          </div>
+          <ul id="history-list" class="history-list hidden"></ul>
+          <p id="history-empty" class="history-empty" data-i18n="historyEmpty">
+            Пока нет сохранённых стенограмм
+          </p>
+        </section>
+
+        <section class="card">
+          <p class="card-title" data-i18n="source">Источник</p>
+          <div class="segmented mode-row">
+            <label>
+              <input type="radio" name="fetch-mode" value="captions" checked />
+              <span data-i18n="captionsMode">Субтитры видео</span>
+            </label>
+            <label id="stt-mode-label">
+              <input type="radio" name="fetch-mode" value="local-stt" />
+              <span data-i18n="sttMode">Из аудио (Whisper)</span>
+            </label>
+          </div>
+          <p id="captions-hint" class="hint" data-i18n="captionsHint">
+            Готовый текст из файла субтитров Rutube/YouTube/VK — не распознавание голоса.
+          </p>
+          <p id="stt-hint" class="hint hidden" data-i18n="sttHint">
+            Запасной вариант: распознавание речи (нужен whisper-server).
+          </p>
+        </section>
+
+        <section class="card">
+          <p class="card-title" data-i18n="display">Отображение</p>
+          <div class="segmented view-row">
+            <label>
+              <input type="radio" name="view-mode" value="minutes" checked />
+              <span data-i18n="viewMinutes">По минутам</span>
+            </label>
+            <label>
+              <input type="radio" name="view-mode" value="phrases" />
+              <span data-i18n="viewPhrases">По фразам</span>
+            </label>
+          </div>
+        </section>
+
+        <div id="progress-wrap" class="progress-block hidden">
+          <div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div>
+          <p id="progress-text" class="progress-label"></p>
+        </div>
+
+        <div id="skeleton" class="skeleton-list hidden" aria-hidden="true">
+          <div class="skeleton skeleton-block"></div>
+          <div class="skeleton skeleton-line" style="width: 70%"></div>
+          <div class="skeleton skeleton-line" style="width: 50%"></div>
+        </div>
+
+        <section id="translate-row" class="card translate-row hidden">
+          <p class="card-title" data-i18n="translate">Перевод</p>
+          <div class="translate-controls">
+            <label class="field-label translate-label">
+              <span data-i18n="language">Язык</span>
+              <select id="translate-lang"></select>
+            </label>
+            <button
+              type="button"
+              id="btn-translate"
+              class="btn btn-sm"
+              data-i18n="apply"
+            >Применить</button>
+          </div>
+        </section>
+
+        <section id="result-section" class="card result-section hidden">
+          <p id="result-meta" class="result-meta"></p>
+          <pre id="output" class="output"></pre>
+        </section>
+      </div>
+
+      <footer class="app-footer">
+        <div class="footer-actions">
+          <button type="button" id="btn-copy" class="btn btn-ghost btn-sm" data-i18n="copy" disabled>Копировать</button>
+          <button type="button" id="btn-txt" class="btn btn-ghost btn-sm" disabled>.txt</button>
+          <button type="button" id="btn-srt" class="btn btn-ghost btn-sm" disabled>.srt</button>
+          <button type="button" id="btn-json" class="btn btn-ghost btn-sm" disabled>.json</button>
+        </div>
+        <button
+          type="button"
+          id="open-options"
+          class="btn btn-ghost btn-sm"
+          data-i18n="settings"
+          data-i18n-title="settingsAria"
+          aria-label="Настройки"
+        >Настройки</button>
+      </footer>
+
+      <div id="donation-host" class="donation-host"></div>
+    </div>
+
+    <div
+      id="confirm-dialog"
+      class="confirm-dialog hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="confirm-title"
+    >
+      <div class="confirm-backdrop" data-confirm-dismiss></div>
+      <div class="confirm-panel card">
+        <p id="confirm-title" class="confirm-title" data-i18n="confirmTitle">Подтверждение</p>
+        <p id="confirm-message" class="confirm-message"></p>
+        <div class="confirm-actions">
+          <button type="button" id="confirm-cancel" class="btn btn-ghost btn-sm" data-i18n="cancel">
+            Отмена
+          </button>
+          <button type="button" id="confirm-ok" class="btn btn-primary btn-sm" data-i18n="confirmDelete">
+            Удалить
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast-host" class="toast-host" aria-live="polite"></div>
+
+    <script type="module" src="./popup.ts"></script>
+  </body>
+</html>

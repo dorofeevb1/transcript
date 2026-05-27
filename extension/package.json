@@ -1,0 +1,30 @@
+{
+  "name": "youtube-transcript-extension",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:firefox": "FIREFOX_BUILD=1 tsc && FIREFOX_BUILD=1 vite build && node scripts/patch-firefox-manifest.mjs",
+    "preview": "vite preview",
+    "test": "vitest run src",
+    "test:network": "vitest run e2e",
+    "test:coverage": "vitest run src --coverage",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.28",
+    "@playwright/test": "^1.60.0",
+    "@types/chrome": "^0.0.268",
+    "@vitest/coverage-v8": "^2.1.9",
+    "playwright": "^1.60.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.6"
+  }
+}

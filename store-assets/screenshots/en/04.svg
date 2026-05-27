@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a0f1a"/>
+      <stop offset="1" stop-color="#0f0f0f"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#cc0029"/>
+      <stop offset="1" stop-color="#ff4d6b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.1" cy="0.1" r="0.7">
+      <stop offset="0" stop-color="#ff4d6b" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ff4d6b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="30" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="800" fill="url(#bg)"/>
+  <rect width="1280" height="800" fill="url(#glow)"/>
+  <text x="90" y="270" font-family="DejaVu Sans" font-size="18" font-weight="700" fill="#ff8aa0" letter-spacing="2">TRANSLATE</text>
+<text x="90" y="320" font-family="DejaVu Sans" font-size="44" font-weight="700" fill="#f8fafc">Translate to any</text>
+<text x="90" y="370" font-family="DejaVu Sans" font-size="44" font-weight="700" fill="#f8fafc">language.</text>
+<text x="90" y="470" font-family="DejaVu Sans" font-size="20" font-weight="500" fill="#cbd5e1">30+ languages via Google by default, or</text>
+<text x="90" y="499" font-family="DejaVu Sans" font-size="20" font-weight="500" fill="#cbd5e1">fully offline via Argos and a local server.</text>
+  
+  <g transform="translate(830 100)" filter="url(#shadow)">
+    <rect x="0" y="0" width="360" height="600" rx="18" fill="#0f0f0f"/>
+    <line x1="0" y1="56" x2="360" y2="56" stroke="#303030" stroke-width="1"/>
+    <!-- brand mark -->
+    <rect x="16" y="14" width="28" height="28" rx="6" fill="url(#brand)"/>
+    <polygon points="26,22 26,36 38,29" fill="#ffffff"/>
+    <rect x="22" y="38" width="14" height="2" rx="1" fill="#ffffff"/>
+    <text x="52" y="29" font-family="DejaVu Sans" font-size="13" font-weight="700" fill="#f1f5f9">Transcript</text>
+    <text x="52" y="42" font-family="DejaVu Sans" font-size="9" font-weight="500" fill="#94a3b8">YouTube · Rutube · VK</text>
+
+    <!-- primary action -->
+    <rect x="218" y="14" width="88" height="28" rx="6" fill="#ff4d6b"/>
+    <text x="262" y="32" text-anchor="middle" font-family="DejaVu Sans" font-size="12" font-weight="600" fill="#ffffff">Get text</text>
+
+    <!-- theme icon -->
+    <circle cx="324" cy="28" r="5" fill="none" stroke="#b3b3b3" stroke-width="1.5"/>
+
+    <rect x="16" y="72" width="328" height="64" rx="10" fill="#1e1e22" stroke="#303030" stroke-width="1"/>
+<text x="28" y="92" font-family="DejaVu Sans" font-size="13" font-weight="600" fill="#f1f5f9">How black holes warp time and space</text>
+<text x="28" y="124" font-family="DejaVu Sans" font-size="11" fill="#cbd5e1">YouTube · dQw4w9WgXcQ · ru</text><rect x="16" y="152" width="328" height="220" rx="10" fill="#1e1e22" stroke="#303030" stroke-width="1"/>
+<text x="28" y="172" font-family="DejaVu Sans" font-size="11" fill="#94a3b8">Transcript · YouTube · 14 min</text>
+<line x1="28" y1="184" x2="332" y2="184" stroke="#303030" stroke-width="1"/>
+<text x="28" y="204" font-family="DejaVu Sans" font-size="11" font-weight="500" fill="#cbd5e1">00:00 introduction. We talk about why event</text>
+<text x="28" y="221" font-family="DejaVu Sans" font-size="11" font-weight="500" fill="#cbd5e1">horizons form and what happens to objects that</text>
+<text x="28" y="238" font-family="DejaVu Sans" font-size="11" font-weight="500" fill="#cbd5e1">cross them. Mass curves spacetime, and at a</text>
+<text x="28" y="255" font-family="DejaVu Sans" font-size="11" font-weight="500" fill="#cbd5e1">critical density even light cannot escape.</text>
+<rect x="16" y="384" width="328" height="84" rx="10" fill="#1e1e22" stroke="#303030" stroke-width="1"/>
+<text x="28" y="402" font-family="DejaVu Sans" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="0.6">TRANSLATION</text>
+<rect x="28" y="412" width="230" height="36" rx="6" fill="#181818" stroke="#303030" stroke-width="1"/>
+<text x="40" y="434" font-family="DejaVu Sans" font-size="12" fill="#f1f5f9">Français · fr</text>
+<rect x="264" y="412" width="80" height="36" rx="6" fill="#ff4d6b"/>
+<text x="304" y="434" text-anchor="middle" font-family="DejaVu Sans" font-size="12" font-weight="600" fill="#fff">Apply</text>
+
+    <!-- footer -->
+    <line x1="0" y1="556" x2="360" y2="556" stroke="#303030" stroke-width="1"/>
+    <text x="16"  y="578" font-family="DejaVu Sans" font-size="11" font-weight="500" fill="#b3b3b3">Copy</text>
+    <text x="76"  y="578" font-family="DejaVu Sans" font-size="11" font-weight="500" fill="#b3b3b3">.txt</text>
+    <text x="120" y="578" font-family="DejaVu Sans" font-size="11" font-weight="500" fill="#b3b3b3">.srt</text>
+    <text x="344" y="578" text-anchor="end" font-family="DejaVu Sans" font-size="11" font-weight="500" fill="#b3b3b3">Settings</text>
+  </g>
+
+</svg>

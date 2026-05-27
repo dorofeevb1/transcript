@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru" data-i18n-doc-title="optionsTitle" data-theme="auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Настройки — YouTube Стенограмма</title>
+    <link rel="stylesheet" href="../shared/theme.css" />
+    <link rel="stylesheet" href="./options.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="page-header">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <h1 data-i18n="settingsTitle">Настройки</h1>
+            <p class="brand-sub" data-i18n="brandSub">YouTube · Rutube · VK</p>
+          </div>
+        </div>
+      </header>
+
+      <main class="page-main">
+        <section class="card">
+          <h2 class="card-title" data-i18n="optSectionAppearance">Appearance</h2>
+          <div class="field">
+            <label class="field-label" for="theme">
+              <span data-i18n="optTheme">Theme</span>
+            </label>
+            <select id="theme">
+              <option value="auto" data-i18n="optThemeAuto">Auto</option>
+              <option value="light" data-i18n="optThemeLight">Light</option>
+              <option value="dark" data-i18n="optThemeDark">Dark</option>
+            </select>
+            <span class="save-indicator" data-for="theme" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="optFieldSaved">Saved</span>
+            </span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="card-title" data-i18n="optionsLanguages">Языки</h2>
+          <div class="field">
+            <label class="field-label" for="uiLocale">
+              <span data-i18n="optionsUiLang">Язык интерфейса расширения</span>
+            </label>
+            <select id="uiLocale">
+              <option value="auto" data-i18n="optUiAuto">Авто (система / браузер)</option>
+              <option value="ru" data-i18n="optUiRu">Русский</option>
+              <option value="en" data-i18n="optUiEn">English</option>
+              <option value="uk" data-i18n="optUiUk">Українська</option>
+              <option value="de" data-i18n="optUiDe">Deutsch</option>
+              <option value="es" data-i18n="optUiEs">Español</option>
+              <option value="fr" data-i18n="optUiFr">Français</option>
+            </select>
+            <span class="save-indicator" data-for="uiLocale" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="optFieldSaved">Saved</span>
+            </span>
+          </div>
+          <p class="hint" data-i18n="optionsReloadUiHint">
+            Язык интерфейса применится после повторного открытия этой страницы или popup.
+          </p>
+
+          <div class="field">
+            <label class="field-label" for="captionLanguage">
+              <span data-i18n="optionsCaptionLang">Язык субтитров YouTube</span>
+            </label>
+            <select id="captionLanguage">
+              <option value="auto" data-i18n="optCaptionAuto">Авто (ru → en)</option>
+              <option value="ru" data-i18n="optCaptionRu">Русский</option>
+              <option value="en" data-i18n="optCaptionEn">Английский</option>
+            </select>
+            <span class="save-indicator" data-for="captionLanguage" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="optFieldSaved">Saved</span>
+            </span>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="sttLanguage">
+              <span data-i18n="optionsSttLang">Язык распознавания (режим «Из аудио»)</span>
+            </label>
+            <select id="sttLanguage">
+              <option value="ru" data-i18n="optSttRu">Русский</option>
+              <option value="en" data-i18n="optSttEn">Английский</option>
+              <option value="auto" data-i18n="optSttAuto">Авто</option>
+            </select>
+            <span class="save-indicator" data-for="sttLanguage" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="optFieldSaved">Saved</span>
+            </span>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="sttMaxRecordSec">
+              <span data-i18n="optionsMaxRecord">Макс. запись «Из аудио» (минут)</span>
+            </label>
+            <select id="sttMaxRecordSec">
+              <option value="180">3</option>
+              <option value="300">5</option>
+              <option value="600">10</option>
+              <option value="1200">20</option>
+              <option value="1800">30</option>
+              <option value="3600">60</option>
+            </select>
+            <span class="save-indicator" data-for="sttMaxRecordSec" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="optFieldSaved">Saved</span>
+            </span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="card-title" data-i18n="optionsSegmentation">Разбивка текста</h2>
+          <div class="field">
+            <label class="field-label" for="blockSizeSec">
+              <span data-i18n="optionsBlockSize">Размер блока</span>
+            </label>
+            <select id="blockSizeSec">
+              <option value="30" data-i18n="optBlock30">30 секунд</option>
+              <option value="60" data-i18n="optBlock60">1 минута</option>
+              <option value="120" data-i18n="optBlock120">2 минуты</option>
+            </select>
+            <span class="save-indicator" data-for="blockSizeSec" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="optFieldSaved">Saved</span>
+            </span>
+          </div>
+          <label class="checkbox-field" style="margin-top: var(--space-3)">
+            <input type="checkbox" id="markSilentMinutes" />
+            <span data-i18n="optionsSilentMinutes">Пустые минуты помечать [тишина]</span>
+          </label>
+        </section>
+        <div id="monetization-host"></div>
+      </main>
+    </div>
+
+    <div id="toast-host" class="toast-host" aria-live="polite"></div>
+
+    <script type="module" src="./options.ts"></script>
+  </body>
+</html>

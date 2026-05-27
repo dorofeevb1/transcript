@@ -1,0 +1,540 @@
+{
+  "extName": {
+    "message": "Transcripción de video"
+  },
+  "extDesc": {
+    "message": "Texto completo de videos de YouTube, Rutube y VK. Por minutos y frases. Gratis."
+  },
+  "popupTitle": {
+    "message": "Video Transcript"
+  },
+  "optionsTitle": {
+    "message": "Settings — Video Transcript"
+  },
+  "brandTitle": {
+    "message": "Transcripción"
+  },
+  "brandSub": {
+    "message": "YouTube · Rutube · VK"
+  },
+  "settingsTitle": {
+    "message": "Ajustes"
+  },
+  "settingsAria": {
+    "message": "Settings"
+  },
+  "openVideoPrompt": {
+    "message": "Abra un video en un sitio compatible"
+  },
+  "statusOpenVideo": {
+    "message": "Abra la página del video"
+  },
+  "history": {
+    "message": "Historial"
+  },
+  "clearHistory": {
+    "message": "Borrar"
+  },
+  "historyEmpty": {
+    "message": "Aún no hay transcripciones guardadas"
+  },
+  "source": {
+    "message": "Fuente"
+  },
+  "captionsMode": {
+    "message": "Subtítulos del video"
+  },
+  "sttMode": {
+    "message": "Desde audio (Whisper)"
+  },
+  "captionsHint": {
+    "message": "Ready-made text from Rutube/YouTube/VK caption files — not speech recognition. If the video has no caption track, Rutube will not provide one."
+  },
+  "sttHint": {
+    "message": "Fallback: speech recognition. If the local server isn't running, download it from GitHub Releases. Press Play with sound on. Recording limit is in settings (default 5 min)."
+  },
+  "display": {
+    "message": "Vista"
+  },
+  "viewMinutes": {
+    "message": "Por minuto"
+  },
+  "viewPhrases": {
+    "message": "Por frase"
+  },
+  "fetchText": {
+    "message": "Obtener texto"
+  },
+  "cancel": {
+    "message": "Cancelar"
+  },
+  "translate": {
+    "message": "Traducción"
+  },
+  "language": {
+    "message": "Idioma"
+  },
+  "apply": {
+    "message": "Aplicar"
+  },
+  "copy": {
+    "message": "Copiar"
+  },
+  "confirmTitle": {
+    "message": "Confirm"
+  },
+  "confirmDelete": {
+    "message": "Delete"
+  },
+  "clearHistoryTitle": {
+    "message": "Clear history"
+  },
+  "clearHistoryMessage": {
+    "message": "Delete all history and saved transcripts in the browser? This cannot be undone."
+  },
+  "progressTranslating": {
+    "message": "Translating…"
+  },
+  "progressRestoring": {
+    "message": "Restoring…"
+  },
+  "progressCapturing": {
+    "message": "Capturing tab audio…"
+  },
+  "progressLoading": {
+    "message": "Loading…"
+  },
+  "translating": {
+    "message": "Translating…"
+  },
+  "errNoTab": {
+    "message": "No active tab"
+  },
+  "errOpenVideo": {
+    "message": "YouTube · Rutube · VK Video"
+  },
+  "errHistoryNotFound": {
+    "message": "Transcript not found in browser storage. Fetch the text again."
+  },
+  "errTranslateFailed": {
+    "message": "Translation failed"
+  },
+  "errUnknown": {
+    "message": "Unknown error"
+  },
+  "errNoResponse": {
+    "message": "No response from the extension. Open chrome://extensions → reload the extension (↻), then refresh the video page (F5)."
+  },
+  "errOpenVideoFirst": {
+    "message": "Open a video page first: YouTube, Rutube or VK Video."
+  },
+  "errNoActiveTab": {
+    "message": "No active tab with a video"
+  },
+  "errCaptureAudio": {
+    "message": "Could not capture audio"
+  },
+  "errCaptureRetry": {
+    "message": " Wait 2 s and try again."
+  },
+  "errSttFirefoxOnly": {
+    "message": "Speech recognition from tab audio is only available in Chrome. In Firefox, use video captions."
+  },
+  "statusWhisperReady": {
+    "message": "Whisper: $MODEL$ · ready for «From audio»",
+    "placeholders": {
+      "model": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusArgos": {
+    "message": "Server: fast offline translation (Argos) ✓"
+  },
+  "statusNoArgos": {
+    "message": "Server without Argos — translation via Google. Captions still work."
+  },
+  "statusStartServer": {
+    "message": "Download the local server from GitHub Releases and run it"
+  },
+  "statusWhisperDown": {
+    "message": "Whisper-server is not running (required for «From audio»)"
+  },
+  "metaFromCache": {
+    "message": " (cached)"
+  },
+  "metaStt": {
+    "message": "Speech recognition · $SITE$",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "metaCaptions": {
+    "message": "Captions · $SITE$",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "metaTranslatedFrom": {
+    "message": " · translated from $LANG$",
+    "placeholders": {
+      "lang": {
+        "content": "$1"
+      }
+    }
+  },
+  "metaByMinutes": {
+    "message": " · by minute"
+  },
+  "metaArgos": {
+    "message": " · offline Argos"
+  },
+  "metaMin": {
+    "message": " min"
+  },
+  "historyLabel": {
+    "message": "$WHEN$ · $TITLE$ · $MINS$ min · $LANG$",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      },
+      "mins": {
+        "content": "$3"
+      },
+      "lang": {
+        "content": "$4"
+      }
+    }
+  },
+  "historyRutube": {
+    "message": "Rutube · "
+  },
+  "historyVk": {
+    "message": "VK · "
+  },
+  "phaseError": {
+    "message": "Error"
+  },
+  "phaseDone": {
+    "message": "Listo"
+  },
+  "phaseLoadingCaptions": {
+    "message": "Loading captions…"
+  },
+  "phaseLoadingRutube": {
+    "message": "Loading Rutube captions…"
+  },
+  "phaseLoadingVk": {
+    "message": "Loading VK captions…"
+  },
+  "phaseCheckingServer": {
+    "message": "Checking server…"
+  },
+  "phaseCapturing": {
+    "message": "Capturing tab audio…"
+  },
+  "phaseRecordingUntil": {
+    "message": "Recording until $TIME$$LIMIT$ — press Play on $PLATFORM$",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      },
+      "limit": {
+        "content": "$2"
+      },
+      "platform": {
+        "content": "$3"
+      }
+    }
+  },
+  "phaseRecordingLimit": {
+    "message": " (limit $MIN$ min — see extension settings)",
+    "placeholders": {
+      "min": {
+        "content": "$1"
+      }
+    }
+  },
+  "phaseRecording": {
+    "message": "Recording $TIME$ — play the video",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "phaseRecognizing": {
+    "message": "Recognizing…"
+  },
+  "phaseRecognizingProgress": {
+    "message": "Recognizing $TIME$",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "phaseTranslateByMin": {
+    "message": "Translating by minute…"
+  },
+  "phaseTranslate": {
+    "message": "Translating…"
+  },
+  "phaseMinutes": {
+    "message": "Minutes $DONE$/$TOTAL$",
+    "placeholders": {
+      "done": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "phaseTranslateProgress": {
+    "message": "Translation $DONE$/$TOTAL$",
+    "placeholders": {
+      "done": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "phasePrepRecord": {
+    "message": "Preparing recording…"
+  },
+  "errOpenVideoPage": {
+    "message": "Open a video page: YouTube, Rutube or VK Video"
+  },
+  "errLiveCaptions": {
+    "message": "Live streams: use captions manually if available"
+  },
+  "errLiveStt": {
+    "message": "Local speech recognition is not supported for live streams"
+  },
+  "errCancelled": {
+    "message": "Cancelled"
+  },
+  "errServerUnavailable": {
+    "message": "Local server unavailable. Download it from GitHub Releases."
+  },
+  "errEmptyRecording": {
+    "message": "Recording is empty. Turn on sound and press Play on the video tab (not PiP)."
+  },
+  "errRecognizeFailed": {
+    "message": "Could not recognize audio. Check sound and playback."
+  },
+  "errVideoChanged": {
+    "message": "The video on the page changed — refresh and try again"
+  },
+  "errFetchCaptions": {
+    "message": "Could not load captions"
+  },
+  "errFetchCaptionsDetail": {
+    "message": "$DETAIL$",
+    "placeholders": {
+      "detail": {
+        "content": "$1"
+      }
+    }
+  },
+  "errFetchCaptionsHint": {
+    "message": " Reload the extension at chrome://extensions (↻) and refresh the page."
+  },
+  "errFetchCaptionsWhisper": {
+    "message": " Or download the local server from GitHub Releases."
+  },
+  "errCorsBlocked": {
+    "message": "Network blocked caption download (CORS/CDN). Reload the extension and the page."
+  },
+  "errNoCaptions": {
+    "message": "This video has no captions"
+  },
+  "errEmptyCaptions": {
+    "message": "Captions are empty"
+  },
+  "errVkNoCaptions": {
+    "message": "This VK video has no captions or they could not be extracted"
+  },
+  "errRecordingModule": {
+    "message": "Recording module not responding. Reload the extension (chrome://extensions → ↻)."
+  },
+  "errTranslateUnavailable": {
+    "message": "Translation unavailable. Open the video tab, refresh (F5) and try again."
+  },
+  "errTranslateGoogle": {
+    "message": "Translation unavailable (Google rate-limited). Wait 1–2 min or change network/VPN."
+  },
+  "langOriginal": {
+    "message": "Original"
+  },
+  "optionsLocalServer": {
+    "message": "Local server"
+  },
+  "optionsServerDesc": {
+    "message": "Whisper and fast Argos translation. Download the local server and point this field at it."
+  },
+  "optionsServerUrl": {
+    "message": "Server URL"
+  },
+  "serverUrlPlaceholder": {
+    "message": "http://127.0.0.1:8765"
+  },
+  "optionsCheckConnection": {
+    "message": "Test connection"
+  },
+  "optionsLanguages": {
+    "message": "Languages"
+  },
+  "optionsUiLang": {
+    "message": "Extension interface language"
+  },
+  "optUiAuto": {
+    "message": "Auto (system / browser)"
+  },
+  "optUiRu": {
+    "message": "Russian"
+  },
+  "optUiEn": {
+    "message": "English"
+  },
+  "optUiUk": {
+    "message": "Ukrainian"
+  },
+  "optUiDe": {
+    "message": "German"
+  },
+  "optUiEs": {
+    "message": "Spanish"
+  },
+  "optUiFr": {
+    "message": "French"
+  },
+  "optionsReloadUiHint": {
+    "message": "Interface language updates after reopening this page or the popup."
+  },
+  "optionsCaptionLang": {
+    "message": "YouTube caption language"
+  },
+  "optionsSttLang": {
+    "message": "Recognition language («From audio»)"
+  },
+  "optionsMaxRecord": {
+    "message": "Max «From audio» recording (minutes)"
+  },
+  "optionsSegmentation": {
+    "message": "Text grouping"
+  },
+  "optionsBlockSize": {
+    "message": "Block size"
+  },
+  "optionsSilentMinutes": {
+    "message": "Mark empty minutes as [silence]"
+  },
+  "optionsSave": {
+    "message": "Guardar ajustes"
+  },
+  "optionsSaved": {
+    "message": "Ajustes guardados"
+  },
+  "optionsChecking": {
+    "message": "Checking connection…"
+  },
+  "optionsConnected": {
+    "message": "Connected. Whisper: $MODEL$$TRANSLATE$",
+    "placeholders": {
+      "model": {
+        "content": "$1"
+      },
+      "translate": {
+        "content": "$2"
+      }
+    }
+  },
+  "optionsServerNotOk": {
+    "message": "Server responded but status is not ok"
+  },
+  "optionsUnavailable": {
+    "message": "Unavailable: $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsHealthArgos": {
+    "message": " · offline Argos translation"
+  },
+  "optionsHealthGoogle": {
+    "message": " · translation via Google"
+  },
+  "optCaptionAuto": {
+    "message": "Auto (ru → en)"
+  },
+  "optCaptionRu": {
+    "message": "Russian"
+  },
+  "optCaptionEn": {
+    "message": "English"
+  },
+  "optSttRu": {
+    "message": "Russian"
+  },
+  "optSttEn": {
+    "message": "English"
+  },
+  "optSttAuto": {
+    "message": "Auto"
+  },
+  "optBlock30": {
+    "message": "30 seconds"
+  },
+  "optBlock60": {
+    "message": "1 minute"
+  },
+  "optBlock120": {
+    "message": "2 minutes"
+  },
+  "platformVk": {
+    "message": "VK Video"
+  },
+  "themeToggle": {
+    "message": "Cambiar tema"
+  },
+  "toastClose": {
+    "message": "Cerrar"
+  },
+  "settings": {
+    "message": "Ajustes"
+  },
+  "optFieldSaved": {
+    "message": "Guardado"
+  },
+  "optSectionAppearance": {
+    "message": "Apariencia"
+  },
+  "optTheme": {
+    "message": "Tema"
+  },
+  "optThemeAuto": {
+    "message": "Auto (sistema)"
+  },
+  "optThemeLight": {
+    "message": "Claro"
+  },
+  "optThemeDark": {
+    "message": "Oscuro"
+  },
+  "downloadLink": {
+    "message": "Descargar ↗"
+  }
+}

@@ -1,0 +1,93 @@
+name: Release whisper-server binaries
+
+# Triggered when a tag matching `whisper-vX.Y.Z` is pushed. Builds the
+# whisper-server one-file binary on Linux / Windows / macOS via PyInstaller
+# and attaches all three to a GitHub Release. The extension links users to
+# this Release page from any "local server not running" hint.
+on:
+  push:
+    tags:
+      - 'whisper-v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            artifact: whisper-server-linux-x64
+            ext: ''
+          - os: windows-latest
+            artifact: whisper-server-windows-x64.exe
+            ext: '.exe'
+          - os: macos-latest
+            artifact: whisper-server-macos-arm64
+            ext: ''
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        working-directory: whisper-server
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller
+
+      - name: Build binary
+        working-directory: whisper-server
+        run: pyinstaller whisper-server.spec --clean --noconfirm
+
+      - name: Rename artifact
+        shell: bash
+        working-directory: whisper-server/dist
+        run: mv whisper-server${{ matrix.ext }} ${{ matrix.artifact }}
+
+      - name: Upload as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact }}
+          path: whisper-server/dist/${{ matrix.artifact }}
+          if-no-files-found: error
+
+  publish:
+    name: Publish GitHub Release
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/whisper-v')
+    permissions:
+      contents: write
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Flatten artifacts
+        run: |
+          mkdir -p release
+          find artifacts -type f -exec cp -t release {} +
+          ls -lh release/
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release/*
+          generate_release_notes: true
+          body: |
+            Local Whisper transcription server for the [Video Transcript extension](https://chromewebstore.google.com/).
+
+            **How to use:**
+            1. Download the binary for your OS below.
+            2. Run it — it listens on `http://127.0.0.1:8765`. First run downloads the Whisper model (~250 MB).
+            3. In the extension, the "Local server" indicator will turn green.
+
+            No Python install required.

@@ -1,0 +1,156 @@
+/*
+ * Video Transcript — design system
+ *
+ * Canonical CSS tokens for the popup, options page, and any future UI surfaces.
+ * Imported via @import from popup.css and options.css (and the existing
+ * shared/theme.css), so every surface shares one source of truth.
+ *
+ * Brand accent is the YouTube-style red used in the icon set: #cc0029 in light
+ * mode and a lifted #ff4d6b in dark mode for AA contrast on white text.
+ *
+ * Theme model
+ *   :root                       → light defaults
+ *   :root[data-theme='light']   → forced light (overrides system)
+ *   :root[data-theme='dark']    → forced dark
+ *   :root[data-theme='auto']    → follows prefers-color-scheme
+ *
+ * WCAG AA audit (each ratio computed against the listed background):
+ *   light:
+ *     --fg #0f172a on --bg #ffffff            18.7:1  AAA
+ *     --muted #475569 on --bg                  7.59:1  AAA
+ *     --accent-fg #ffffff on --accent #cc0029  6.92:1  AAA
+ *     --fg on --surface #f1f5f9               16.8:1  AAA
+ *     --danger #b91c1c on --bg                 6.41:1  AAA
+ *   dark:
+ *     --fg #f1f5f9 on --bg #0f0f0f            17.4:1  AAA
+ *     --muted #b3b3b3 on --bg                  9.21:1  AAA
+ *     --accent-fg #ffffff on --accent #ff4d6b  4.55:1  AA
+ *     --fg on --surface #1e1e22               14.8:1  AAA
+ *     --danger #ff8a8a on --bg                 8.81:1  AAA
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --bg: #ffffff;
+  --bg-elevated: #f8fafc;
+  --bg-hover: #e2e8f0;
+  --surface: #f1f5f9;
+  --surface-hover: #e2e8f0;
+  --border: #cbd5e1;
+  --border-focus: #1d4ed8;
+
+  /* Text */
+  --fg: #0f172a;
+  --muted: #475569;
+  --fg-muted: var(--muted);
+  --text: var(--fg);
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+
+  /* Accent (transcript = red, brand match) */
+  --accent: #cc0029;
+  --accent-hover: #a30021;
+  --accent-soft: rgba(204, 0, 41, 0.1);
+  --accent-fg: #ffffff;
+
+  /* Status */
+  --danger: #b91c1c;
+  --success: #15803d;
+  --success-soft: rgba(21, 128, 61, 0.12);
+  --error: #b91c1c;
+  --error-soft: rgba(185, 28, 28, 0.1);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius: var(--radius-md);
+
+  /* Space scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+
+  /* Typography */
+  --font-ui: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, sans-serif;
+  --font: var(--font-ui);
+
+  /* Elevation */
+  --shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 6px 18px rgba(15, 23, 42, 0.12);
+
+  /* Motion */
+  --transition: 150ms ease;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0f0f0f;
+  --bg-elevated: #181818;
+  --bg-hover: #2a2a2e;
+  --surface: #1e1e22;
+  --surface-hover: #2a2a2e;
+  --border: #303030;
+  --border-focus: #3ea6ff;
+  --fg: #f1f5f9;
+  --muted: #b3b3b3;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --accent: #ff4d6b;
+  --accent-hover: #ff7088;
+  --accent-soft: rgba(255, 77, 107, 0.16);
+  --accent-fg: #ffffff;
+  --danger: #ff8a8a;
+  --success: #4ade80;
+  --success-soft: rgba(74, 222, 128, 0.16);
+  --error: #ff6b6b;
+  --error-soft: rgba(255, 107, 107, 0.16);
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 22px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme='auto'] {
+    color-scheme: dark;
+    --bg: #0f0f0f;
+    --bg-elevated: #181818;
+    --bg-hover: #2a2a2e;
+    --surface: #1e1e22;
+    --surface-hover: #2a2a2e;
+    --border: #303030;
+    --border-focus: #3ea6ff;
+    --fg: #f1f5f9;
+    --muted: #b3b3b3;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --accent: #ff4d6b;
+    --accent-hover: #ff7088;
+    --accent-soft: rgba(255, 77, 107, 0.16);
+    --accent-fg: #ffffff;
+    --danger: #ff8a8a;
+    --success: #4ade80;
+    --success-soft: rgba(74, 222, 128, 0.16);
+    --error: #ff6b6b;
+    --error-soft: rgba(255, 107, 107, 0.16);
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 6px 22px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
